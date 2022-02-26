@@ -21,6 +21,9 @@ if (isset($_SESSION['first_visit'])) {
       header("Location: index.php?otp=expired");
    }
    if (isset($_SESSION['third_visit'])) {
+      header("Location: index.php?otp=expired");
+   else {
+      $_SESSION['third_visit'] = "Third Visit";
       header("Location: index.php?confirm=identity");
    }
 }
